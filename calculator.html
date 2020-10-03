@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Building Simple Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" name="form">
+            <h2 style="text-align: center; color:darkcyan; margin-top: 7px;">Simple Calculator</h2>
+            <input type="text" name="display" id="" placeholder="0" class="form-control main-form">
+        
+        <div class="button-area">
+            <div class="line">
+                <input type="button" value="7" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="8" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="9" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="+" class="btn btn-warning" onclick="showValue(this.value)">
+            </div>
+            <div class="line">
+                <input type="button" value="4" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="5" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="6" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="-" class="btn btn-warning" onclick="showValue(this.value)">
+            </div>
+            <div class="line">
+                <input type="button" value="3" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="2" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="1" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="/" class="btn btn-warning" onclick="showValue(this.value)">
+            </div>
+            <div class="line">
+                <input type="button" value="0" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="00" class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="." class="btn btn-success" onclick="showValue(this.value)">
+                <input type="button" value="*" class="btn btn-warning" onclick="showValue(this.value)">
+            </div>
+            <div class="last-row">
+                <input type="button" value="C" class="btn btn-danger clear" onclick="display.value = null">
+                <input type="button" value="=" class="btn btn-warning clear" onclick="display.value = eval(display.value)">  
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <script>
+        function showValue(inputValue){
+            form.display.value= form.display.value+inputValue;
+        }
+    </script>
+
+    <!-- //bootstrap link -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
